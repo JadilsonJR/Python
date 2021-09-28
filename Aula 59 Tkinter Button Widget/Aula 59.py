@@ -1,12 +1,12 @@
 from tkinter import *
 import os
 
-c=os.path.dirname(__file__)
-nomeArquivo=c+"\\nomes.txt"
+c=os.path.dirname(__file__) # caminho da pasta 
+nomeArquivo=c+"\\nomes.txt" 
 
 def gravarDados():
     arquivo=open(nomeArquivo,"a")
-    arquivo.write("Nome:%s" % vnome.get()) #Imprimindo o nome vindo do Tkinter utilizando o Get para pegar o conteudo)
+    arquivo.write("Nome:%s" % vnome.get()) #Escrevendo no arquivo o nome vindo do Tkinter utilizando o Get para pegar o conteudo)
     arquivo.write("\nTelefone:%s" % vfone.get()) 
     arquivo.write("\nE-mail:%s" %  vemail.get())
     arquivo.write("\nObservação:%s" % vobs.get("1.0",END))
